@@ -51,7 +51,20 @@ var getTime = function () {
     //Set hours
     timeDisplay.innerHTML = myTime;
     setTimeout(getTime, 500);
-
 };
 
 getTime();
+
+var search = function () {
+  var searchBuilder = 'https://www.google.com/#q=',
+      searchText = document.querySelector('.search-text'),
+      searchButton = document.querySelector('.search-button');
+
+      searchButton.addEventListener('click', function() {
+        var query = searchText.value;
+        if (query.length > 0) {
+          var result = searchBuilder + query;
+          window.open(result);
+        }
+      });
+}();

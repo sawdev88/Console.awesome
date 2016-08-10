@@ -19,3 +19,22 @@ html {
   margin-top: -16px;
   font-size: 6em;
 }
+
+form {
+  margin: 0 auto;
+}
+
+.search-text {
+  border: none;
+  width: 80%;
+  font-size: 16px;
+  padding: 8px;
+  vertical-align: top;
+}
+
+.search-button {
+  border: none;
+  font-size: 25px;
+  background: #dd7f4e;
+  color: #fff;
+}
