@@ -21,3 +21,23 @@
   createBG(randPick[0], randPick[1]);
   document.body.style.background = bgColor;
 }());
+
+var getDate = function () {
+  var currentDate = new Date(),
+      day = currentDate.getDate(),
+      month = currentDate.getMonth();
+
+      console.log(day);
+}();
+
+var getTime = function () {
+  var time = new Date(),
+      hours = time.getHours(),
+      minutes = time.getMinutes();
+
+      if (hours > 12) {
+        hours = hours - 12;
+      }
+
+  console.log(hours);
+}();
