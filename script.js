@@ -25,19 +25,33 @@
 var getDate = function () {
   var currentDate = new Date(),
       day = currentDate.getDate(),
-      month = currentDate.getMonth();
+      month = currentDate.getMonth(),
+      dateDisplay = document.querySelector('.date');
 
-      console.log(day);
+    // Set date
+    dateDisplay.innerHTML = day + '/' + month;
 }();
 
 var getTime = function () {
   var time = new Date(),
       hours = time.getHours(),
-      minutes = time.getMinutes();
+      minutes = time.getMinutes(),
+      timeDisplay = document.querySelector('.time'),
+      myTime;
 
       if (hours > 12) {
         hours = hours - 12;
       }
 
-  console.log(hours);
-}();
+      if (minutes < 10) {
+        minutes = '0' + minutes;
+      }
+
+      myTime = hours + ':' + minutes;
+    //Set hours
+    timeDisplay.innerHTML = myTime;
+    setTimeout(getTime, 500);
+
+};
+
+getTime();
