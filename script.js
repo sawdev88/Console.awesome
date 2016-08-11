@@ -69,7 +69,7 @@ var search = function () {
     });
 }();
 
-var add = function (arg) {
+var a = function (arg) {
   var todo = document.querySelector('.todo'),
       item = document.createElement('li');
 
@@ -77,14 +77,14 @@ var add = function (arg) {
     todo.appendChild(item);
 };
 
-var mark = function (index) {
+var m = function (index) {
   var list = document.getElementsByTagName('ul')[0],
       item = list.getElementsByTagName('li');
 
   item[index].setAttribute("class", "complete");
 };
 
-var deleteItem = function (index) {
+var d = function (index) {
   var list = document.getElementsByTagName('ul')[0],
       item = list.getElementsByTagName('li');
 
@@ -111,9 +111,10 @@ var l = function (item) {
 
 console.log('Welcome to console.awesome!');
 console.log('++++++ TODO LIST +++++');
-console.log('Add item to list with add(item)');
-console.log('Mark item complete with mark(index) | ** index starts at 0');
-console.log('Delete item with deleteItem(index) | ** index starts at 0');
+console.log('Add item to list with a(item)');
+console.log('Mark item complete with m(index) | ** index starts at 0');
+console.log('Delete item with d(index) | ** index starts at 0');
+console.log('Delete all items with deleteAll()');
 console.log('\nClear console with c() ');
 console.log('\nconsole.log with l() ');
 console.log('\nOpen Docs with with doc() ');
