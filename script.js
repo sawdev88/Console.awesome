@@ -29,7 +29,7 @@ var getDate = function () {
       dateDisplay = document.querySelector('.date');
 
     // Set date
-    dateDisplay.innerHTML = day + '/' + month;
+    dateDisplay.innerHTML = month + '/' + day;
 }();
 
 var getTime = function () {
@@ -126,12 +126,17 @@ var l = function (item) {
   return console.log(item);
 }
 
-console.log('Welcome to console.awesome!');
-console.log('++++++ TODO LIST ++++++');
-console.log('Add item to list with a(item)');
-console.log('Mark item complete with m(index) | ** index starts at 0');
-console.log('Delete item with d(index) | ** index starts at 0');
-console.log('Delete all items with deleteAll()');
-console.log('\nClear console with c()');
-console.log('\nconsole.log with l()');
-console.log('\nOpen Docs with with doc()');
+var i = function i() {
+  console.log('Welcome to console.awesome!');
+  console.log('++++++ TODO LIST ++++++');
+  console.log('Add item to list with a(item)');
+  console.log('Mark item complete with m(index) | ** index starts at 0');
+  console.log('Delete item with d(index) | ** index starts at 0');
+  console.log('Delete all items with deleteAll()');
+  console.log('\nClear console with c()');
+  console.log('\nconsole.log with l()');
+  console.log('\nOpen Docs with doc()');
+  console.log('\nOpen Instructions with i()');
+};
+
+i();
