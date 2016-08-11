@@ -5,6 +5,7 @@ html {
   color: #fff;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  overflow-y: hidden;
 }
 
 .hero {
@@ -22,6 +23,11 @@ html {
 
 .todo {
   text-align: left;
+}
+
+.list {
+  height: 60%;
+  overflow-y: scroll;
 }
 
 .list h3 {
@@ -66,6 +72,7 @@ footer {
   .list {
     float: right;
     width: 45%;
+    height: 80%;
   }
   footer {
     right: 50%;

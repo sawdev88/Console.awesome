@@ -91,6 +91,12 @@ var deleteItem = function (index) {
   item[index].parentNode.removeChild(item[index]);
 }
 
+var deleteAll = function () {
+  var list = document.getElementsByTagName('ul')[0],
+
+  list.innerHTML = '';
+}
+
 var c = function () {
   return console.clear();
 }
