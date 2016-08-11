@@ -105,10 +105,15 @@ var doc = function () {
   window.open('http://devdocs.io/');
 }
 
+var l = function (item) {
+  return console.log(item);
+}
+
 console.log('Welcome to console.awesome!');
 console.log('++++++ TODO LIST +++++');
 console.log('Add item to list with add(item)');
 console.log('Mark item complete with mark(index) | ** index starts at 0');
 console.log('Delete item with deleteItem(index) | ** index starts at 0');
 console.log('\nClear console with c() ');
+console.log('\nconsole.log with l() ');
 console.log('\nOpen Docs with with doc() ');
