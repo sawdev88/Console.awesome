@@ -115,6 +115,13 @@ console.log('Add item to list with a(item)');
 console.log('Mark item complete with m(index) | ** index starts at 0');
 console.log('Delete item with d(index) | ** index starts at 0');
 console.log('Delete all items with deleteAll()');
-console.log('\nClear console with c() ');
-console.log('\nconsole.log with l() ');
-console.log('\nOpen Docs with with doc() ');
+console.log('\nClear console with c()');
+console.log('\nconsole.log with l()');
+console.log('\nOpen Docs with with doc()');
+
+
+$.getJSON('http://api.icndb.com/jokes/random', function (json) {
+  var joke = document.querySelector('.chuck');
+  joke.innerHTML = json.value.joke;
+  console.log(json.value.joke);
+})
