@@ -39,15 +39,15 @@ var getTime = function () {
       timeDisplay = document.querySelector('.time'),
       myTime;
 
-      if (hours > 12) {
-        hours = hours - 12;
-      }
+    if (hours > 12) {
+      hours = hours - 12;
+    }
 
-      if (minutes < 10) {
-        minutes = '0' + minutes;
-      }
+    if (minutes < 10) {
+      minutes = '0' + minutes;
+    }
 
-      myTime = hours + ':' + minutes;
+    myTime = hours + ':' + minutes;
     //Set hours
     timeDisplay.innerHTML = myTime;
     setTimeout(getTime, 500);
@@ -60,11 +60,44 @@ var search = function () {
       searchText = document.querySelector('.search-text'),
       searchButton = document.querySelector('.search-button');
 
-      searchButton.addEventListener('click', function() {
-        var query = searchText.value;
-        if (query.length > 0) {
-          var result = searchBuilder + query;
-          window.open(result);
-        }
-      });
+    searchButton.addEventListener('click', function() {
+      var query = searchText.value;
+      if (query.length > 0) {
+        var result = searchBuilder + query;
+        window.open(result);
+      }
+    });
 }();
+
+var add = function (arg) {
+  var todo = document.querySelector('.todo'),
+      item = document.createElement('li');
+
+    item.innerHTML = arg;
+    todo.appendChild(item);
+};
+
+var markComplete = function (index) {
+  var list = document.getElementsByTagName('ul')[0],
+      item = list.getElementsByTagName('li');
+
+  item[index].setAttribute("class", "complete");
+};
+
+var deleteItem = function (index) {
+  var list = document.getElementsByTagName('ul')[0],
+      item = list.getElementsByTagName('li');
+
+  item[index].parentNode.removeChild(item[index]);
+}
+
+var c = function () {
+  return console.clear();
+}
+
+console.log('Welcome to console.awesome!');
+console.log('++++++ TODO LIST +++++');
+console.log('Add item to list with add(item)');
+console.log('Mark item complete with markComplete(index)');
+console.log('Delete item with deleteItem(index)');
+console.log('\nClear console with c() ');
