@@ -39,7 +39,7 @@ html {
 
 footer {
   position: fixed;
-  bottom: 40px;
+  bottom: 16px;
   left: 0;
   right: 0;
 }
@@ -54,9 +54,10 @@ footer {
 
 .search-button {
   border: none;
-  font-size: 25px;
+  font-size: 24px;
   background: #dd7f4e;
   color: #fff;
+  padding: 3px 8px;
 }
 
 .chuck {
