@@ -77,7 +77,7 @@ var add = function (arg) {
     todo.appendChild(item);
 };
 
-var markComplete = function (index) {
+var mark = function (index) {
   var list = document.getElementsByTagName('ul')[0],
       item = list.getElementsByTagName('li');
 
@@ -92,7 +92,7 @@ var deleteItem = function (index) {
 }
 
 var deleteAll = function () {
-  var list = document.getElementsByTagName('ul')[0],
+  var list = document.getElementsByTagName('ul')[0];
 
   list.innerHTML = '';
 }
@@ -101,9 +101,14 @@ var c = function () {
   return console.clear();
 }
 
+var doc = function () {
+  window.open('http://devdocs.io/');
+}
+
 console.log('Welcome to console.awesome!');
 console.log('++++++ TODO LIST +++++');
 console.log('Add item to list with add(item)');
-console.log('Mark item complete with markComplete(index)');
-console.log('Delete item with deleteItem(index)');
+console.log('Mark item complete with mark(index) | ** index starts at 0');
+console.log('Delete item with deleteItem(index) | ** index starts at 0');
 console.log('\nClear console with c() ');
+console.log('\nOpen Docs with with doc() ');
