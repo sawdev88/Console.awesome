@@ -24,6 +24,13 @@ html {
   text-align: left;
 }
 
+.list h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);;
+  width: 40%;
+  margin: 0 auto;
+  line-height: 2em;
+}
+
 footer {
   position: fixed;
   bottom: 40px;
@@ -49,4 +56,18 @@ footer {
 .complete {
   text-decoration: line-through;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 800px) {
+  .day-time {
+    float: left;
+    width: 45%;
+  }
+  .list {
+    float: right;
+    width: 45%;
+  }
+  footer {
+    right: 50%;
+  }
 }
