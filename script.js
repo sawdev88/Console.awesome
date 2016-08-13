@@ -1,3 +1,4 @@
+// Set random background color
 (function() {
     var bg = [
             [
@@ -34,7 +35,7 @@
 
     // Add random color array to gradient builder
     function createBG(item1, item2) {
-        bgColor = 'linear-gradient(to bottom, ' + item1 + ', ' + item2 + ')'
+        bgColor = 'linear-gradient(to right bottom, ' + item1 + ', ' + item2 + ')'
     }
 
     // Call create random background and apply to body;
@@ -42,7 +43,8 @@
     document.body.style.background = bgColor;
 }());
 
-var getDate = function() {
+// Get and display current date
+(function() {
     var currentDate = new Date(),
         day = currentDate.getDate(),
         month = currentDate.getMonth(),
@@ -50,8 +52,9 @@ var getDate = function() {
 
     // Set date
     dateDisplay.innerHTML = month + '/' + day;
-}();
+})();
 
+// Get and display current time
 var getTime = function() {
     var time = new Date(),
         hours = time.getHours(),
@@ -78,7 +81,8 @@ var getTime = function() {
 // Call getTime for setTimeout to update time
 getTime();
 
-var search = function() {
+// Create search input and open result in new tab
+(function() {
     var searchBuilder = 'https://www.google.com/#q=',
         searchText = document.querySelector('.search-text'),
         searchButton = document.querySelector('.search-button');
@@ -91,16 +95,16 @@ var search = function() {
             window.open(result);
         }
     });
-}();
+})();
 
 // Prevent window from reloading when enter is pressed
-var preventEnter = function() {
+(function() {
     $(window).keydown(function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
         }
     })
-}();
+})();
 
 // Add item to todo list
 var a = function(arg) {
