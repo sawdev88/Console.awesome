@@ -126,6 +126,7 @@ var l = function (item) {
   return console.log(item);
 }
 
+// Instructions
 var i = function i() {
   console.log('Welcome to console.awesome!');
   console.log('++++++ TODO LIST ++++++');
@@ -136,7 +137,8 @@ var i = function i() {
   console.log('\nClear console with c()');
   console.log('\nconsole.log with l()');
   console.log('\nOpen Docs with doc()');
-  console.log('\nOpen Instructions with i()');
+  console.log('\nShow Instructions with i()');
 };
 
+// Show instructions
 i();
