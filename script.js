@@ -35,7 +35,7 @@
 
     // Add random color array to gradient builder
     function createBG(item1, item2) {
-        bgColor = 'linear-gradient(to right bottom, ' + item1 + ', ' + item2 + ')'
+        bgColor = 'linear-gradient(to right bottom, ' + item1 + ', ' + item2 + ')';
     }
 
     // Call create random background and apply to body;
@@ -82,7 +82,7 @@ var getTime = function() {
 getTime();
 
 // Create search input and open result in new tab
-(function() {
+var search = function() {
     var searchBuilder = 'https://www.google.com/#q=',
         searchText = document.querySelector('.search-text'),
         searchButton = document.querySelector('.search-button');
@@ -95,16 +95,16 @@ getTime();
             window.open(result);
         }
     });
-})();
+};
 
 // Prevent window from reloading when enter is pressed
-(function() {
+var preventEnter = function() {
     $(window).keydown(function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
         }
-    })
-})();
+    });
+};
 
 // Add item to todo list
 var a = function(arg) {
@@ -129,34 +129,42 @@ var d = function(index) {
         item = list.getElementsByTagName('li');
 
     item[index].parentNode.removeChild(item[index]);
-}
+};
 
 // Clear todo list
 var deleteAll = function() {
     var list = document.getElementsByTagName('ul')[0];
 
     list.innerHTML = '';
-}
+};
 
 // Get chuck Norris jokes and be happy
 $.getJSON('http://api.icndb.com/jokes/random', function(json) {
     var joke = document.querySelector('.chuck');
     joke.innerHTML = json.value.joke;
-})
+});
 
 // Clear console
 var c = function() {
     return console.clear();
-}
+};
 
 // Open doc in tab
 var doc = function() {
     window.open('http://devdocs.io/');
-}
+};
 
 // Log argument
 var l = function(item) {
     return console.log(item);
+};
+
+//Stack overflow magic to fix shortcuts not working on initial load
+window.onload = function () {
+    if (! localStorage.justOnce) {
+        localStorage.setItem("justOnce", "true");
+        window.location.reload();
+    }
 }
 
 // Instructions
