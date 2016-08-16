@@ -159,14 +159,6 @@ var l = function(item) {
     return console.log(item);
 };
 
-//Stack overflow magic to fix shortcuts not working on initial load
-window.onload = function () {
-    if (! localStorage.justOnce) {
-        localStorage.setItem("justOnce", "true");
-        window.location.reload();
-    }
-}
-
 // Instructions
 var i = function i() {
     console.log('Welcome to console.awesome!');
@@ -181,5 +173,6 @@ var i = function i() {
     console.log('\nShow Instructions with i()');
 };
 
+c();
 // Show instructions
 i();
